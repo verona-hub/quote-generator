@@ -1,0 +1,338 @@
+.device:root {
+  font-size: 16px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  text-align: center;
+  height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*
+███████ ████████ ██    ██ ██      ███████
+██         ██     ██  ██  ██      ██
+███████    ██      ████   ██      █████
+     ██    ██       ██    ██      ██
+███████    ██       ██    ███████ ███████
+*/
+
+header,
+footer {
+  background-color: rgba(47, 52, 80, 0.85);
+}
+
+h1,
+footer p {
+  color: whitesmoke;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+main {
+  background-image: url(img/bg/0.jpg);
+  background-size: 100vw 100vh;
+  /*height: 87vh;*/
+  min-height: 93vh;
+  height: 100%;
+  min-width: 100vw;
+}
+
+.quote-wrapper {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  background: linear-gradient(rgba(61, 63, 189, 0.7), rgba(61, 63, 189, 0.7));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  display: block;
+  position: relative;
+}
+
+.quotes p {
+  color: rgb(41, 41, 41);
+  color: whitesmoke;
+  color: palegoldenrod;
+  color: rgb(238, 229, 119);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.italics {
+  font-style: italic;
+}
+
+/*
+███    ███  █████  ██ ███    ██
+████  ████ ██   ██ ██ ████   ██
+██ ████ ██ ███████ ██ ██ ██  ██
+██  ██  ██ ██   ██ ██ ██  ██ ██
+██      ██ ██   ██ ██ ██   ████
+*/
+nav a {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+nav img {
+  padding: 30px 0;
+}
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+}
+
+.quotes {
+  margin: 0 10vw;
+}
+
+.quotes p {
+  padding: 50px;
+}
+
+/*
+██████  ██    ██ ████████ ████████  ██████  ███    ██
+██   ██ ██    ██    ██       ██    ██    ██ ████   ██
+██████  ██    ██    ██       ██    ██    ██ ██ ██  ██
+██   ██ ██    ██    ██       ██    ██    ██ ██  ██ ██
+██████   ██████     ██       ██     ██████  ██   ████
+*/
+
+button {
+  background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+  background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  border: 1px solid #337fed;
+  border: 1px solid #4b8f29;
+  border-radius: 6px;
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  color: whitesmoke;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 60px;
+  padding: 12px 32px;
+  position: absolute;
+  bottom: 30vh;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #5b8a3c;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.7);
+  width: 180px;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0.5) 100%);
+  background-color: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom, #55883b 5%, #77b55a 100%);
+  background-color: #72b352;
+}
+
+button:active {
+  position: absolute;
+  bottom: 30.1vh;
+}
+
+
+/*
+███████  ██████   ██████  ████████ ███████ ██████
+██      ██    ██ ██    ██    ██    ██      ██   ██
+█████   ██    ██ ██    ██    ██    █████   ██████
+██      ██    ██ ██    ██    ██    ██      ██   ██
+██       ██████   ██████     ██    ███████ ██   ██
+*/
+footer,
+.footer-wrapper {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+footer {
+  overflow: hidden;
+  width: 100%;
+}
+
+footer a {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.footer-wrapper img {
+  height: 60px;
+  width: 60px;
+}
+
+/*
+███    ███ ███████ ██████  ██  █████
+████  ████ ██      ██   ██ ██ ██   ██
+██ ████ ██ █████   ██   ██ ██ ███████
+██  ██  ██ ██      ██   ██ ██ ██   ██
+██      ██ ███████ ██████  ██ ██   ██
+*/
+@media screen and (min-width: 1301px) {
+  button {
+    position: absolute;
+    bottom: 30vh;
+  }
+  
+  footer {
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+/*
+ ██     ██████       ██████       ██████      ██████  ██   ██
+███          ██     ██  ████     ██  ████     ██   ██  ██ ██
+ ██      █████      ██ ██ ██     ██ ██ ██     ██████    ███
+ ██          ██     ████  ██     ████  ██     ██       ██ ██
+ ██     ██████       ██████       ██████      ██      ██   ██
+*/
+@media screen and (max-width: 1300px) {
+  nav img {
+    font-size: 40%;
+  }
+  
+  .quotes {
+    margin: 0 3vw;
+  }
+  
+  .quotes p {
+    font-size: 1rem;
+    padding: 20px 10px;
+  }
+  
+  button {
+    height: 70px;
+    /*width: 180px;*/
+  }
+}
+
+@media screen and (max-width: 1300px) and (orientation: portrait) {
+  
+  main {
+    background-image: url(img/bg/0.jpg);
+    background-size: cover;
+    background-position: center;
+/*    min-height: 80vh;
+    
+    min-height: 85vh;
+    height: 100%;*/
+  }
+}
+
+@media screen and (max-width: 1300px) and (orientation: landscape) {
+  button {
+    position: relative;
+    top: 20vh;
+  }
+  button:active {
+    position: relative;
+    top: 20.1vh;
+  }
+}
+
+/*
+ ██      ██████       ██████       ██████      ██████  ██   ██
+███     ██  ████     ██  ████     ██  ████     ██   ██  ██ ██
+ ██     ██ ██ ██     ██ ██ ██     ██ ██ ██     ██████    ███
+ ██     ████  ██     ████  ██     ████  ██     ██       ██ ██
+ ██      ██████       ██████       ██████      ██      ██   ██
+*/
+@media screen and (max-width: 1001px) {
+  body {
+    /*    background-size: 100vw 100vh;
+    background-size: 200vw 100vh;
+    background-position: top;*/
+  }
+}
+
+@media screen and (max-width: 1001px) and (orientation: portrait) {
+  footer {}
+}
+
+@media screen and (max-width: 1001px) and (orientation: landscape) {}
+
+@media screen and (max-height: 700px) and (max-width: 1000px) and (orientation: landscape) {}
+
+/*
+ ██████  ██   ██  ██████      ██████  ██   ██
+██       ██   ██ ██  ████     ██   ██  ██ ██
+███████  ███████ ██ ██ ██     ██████    ███
+██    ██      ██ ████  ██     ██       ██ ██
+ ██████       ██  ██████      ██      ██   ██
+*/
+@media screen and (max-width: 640px) and (orientation: portrait) {
+  main {
+    /*min-height: 80vh;*/
+  }
+  
+  button {
+    bottom: 20vh;
+  }
+  
+  button:active {
+    position: absolute;
+    bottom: 20.1vh;
+  }
+  
+  /*button {
+    position: relative;
+    top: 12vh;
+  }
+  button:active {
+    position: relative;
+    top: 12.1vh;
+  }*/
+}
+  
+}
+
+@media screen and (max-width: 700px) and (orientation: landscape) {}
+
+/*
+██   ██      █████       ██████      ██████  ██   ██
+██   ██     ██   ██     ██  ████     ██   ██  ██ ██
+███████      █████      ██ ██ ██     ██████    ███
+     ██     ██   ██     ████  ██     ██       ██ ██
+     ██      █████       ██████      ██      ██   ██
+*/
+@media screen and (max-width: 480px) {}
+
+/*
+██████      ███████      ██████      ██████  ██   ██
+     ██          ██     ██  ████     ██   ██  ██ ██
+ █████          ██      ██ ██ ██     ██████    ███
+     ██        ██       ████  ██     ██       ██ ██
+██████         ██        ██████      ██      ██   ██
+*/
+@media screen and (max-width: 370px) {}
