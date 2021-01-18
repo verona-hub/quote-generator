@@ -5,6 +5,9 @@ const quoteButton = document.getElementById('quoteButton');
 const paragraph = document.getElementById('paragraph');
 const body = document.getElementById('body');
 
+// Default background image
+body.style.backgroundImage = `url(img/bg/8.jpg)`;
+
 function randomQuote() {
   const allQuotes = [
     " “Whereof one cannot speak, thereof one must be silent.” <span> – Ludwig Wittgenstein – </span>",
@@ -27,11 +30,21 @@ function randomQuote() {
   paragraph.innerHTML = allQuotes[random];
 
   // Randomly changes the background
+  setTimeout( function () {
   num = Math.floor(Math.random() * 11);
   body.style.backgroundImage = `url(img/bg/${num}.jpg)`;
+  
+}, 100);
+    
+    /*num = Math.floor(Math.random() * 11);
+    body.style.backgroundImage = `url(img/bg/${num}.jpg)`;*/
+    
+
+  
+  
 }
 
-// Event listener for click on quote-button
+// Event listener for click on button
 quoteButton.addEventListener('click', randomQuote);
 
 // Change background and generate a random quote on ENTER or SPACE keypress
@@ -44,7 +57,7 @@ const randomOnKeypress = e => {
 // Event listener on keypress
 document.addEventListener('keydown', randomOnKeypress);
 
-/// NavBar
+/// NavBar, set active class on click
 $('.menu').on('click', '.item.teal', function() {
   if (!$(this).hasClass('active')) {
     $(this).addClass('active').siblings('.item').removeClass('active');
@@ -55,3 +68,5 @@ $('.menu').on('click', '.item.teal', function() {
 $('button').on('mousedown', e => {
   e.preventDefault();
 });
+
+

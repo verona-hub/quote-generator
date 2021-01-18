@@ -14,9 +14,15 @@ html {
 }
 
 body {
-  background-image: url(img/bg/0.jpg);
+  background-repeat: no-repeat !important;
   background-size: 100vw 100% !important;
   min-height: 100vh;
+  overflow-y: scroll;
+}
+
+body.homepage {
+  background-image: url(img/bg/0.jpg);
+  background-color: #1b1c1d !important;
 }
 
 /*
@@ -46,20 +52,18 @@ main>.quote-wrapper {
 }
 
 .quote-wrapper>p {
-  color: rgb(41, 41, 41);
-  color: whitesmoke;
-  color: palegoldenrod;
   color: rgb(238, 229, 119);
   font-family: 'Bodoni Moda', serif;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-style: italic;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
 }
 
 .quote-wrapper p > span {
   display: block;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-style: normal;
+  letter-spacing: 0.4rem;
   padding-top: 2vh;
 }
 
@@ -98,6 +102,76 @@ img.github {
 }
 
 /*
+ █████  ██████   ██████  ██    ██ ████████
+██   ██ ██   ██ ██    ██ ██    ██    ██
+███████ ██████  ██    ██ ██    ██    ██
+██   ██ ██   ██ ██    ██ ██    ██    ██
+██   ██ ██████   ██████   ██████     ██
+*/
+
+.welcome {
+  margin: 100px 50px 100px;
+}
+
+h2.ui.header.block {
+  /*margin-bottom: 50px;*/
+}
+
+div.ui.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.list > .item {
+  align-items: center;
+  display: flex !important;
+  flex-direction: column;
+  margin: 100px;
+}
+
+.list > a.item:hover {
+  cursor: default;
+}
+
+.content .header {
+  margin-right: 13px !important;
+}
+
+i.icon {
+  padding-right: 0 !important;
+}
+
+
+
+a.item > i.html5 {
+  color: #F16529 !important;
+}
+a.item > i.html5:hover {
+  color: #E44D26 !important;
+}
+
+
+a.item > i.css3 {
+  color: #2965f1 !important;
+}
+a.item > i.css3:hover {
+  color: #264de4 !important;
+}
+
+
+a.item > i.js {
+  color: #f0db4f !important; 
+}
+a.item > i.js:hover {
+  color: #E8C72F !important;
+}
+
+
+
+
+/*
 ███████  ██████   ██████  ████████ ███████ ██████
 ██      ██    ██ ██    ██    ██    ██      ██   ██
 █████   ██    ██ ██    ██    ██    █████   ██████
@@ -105,11 +179,19 @@ img.github {
 ██       ██████   ██████     ██    ███████ ██   ██
 */
 .footer {
-  bottom: 0;
   /*height: 30vh;*/
-  position: fixed;
   width: 100%;
 }
+
+.fixed {
+  bottom: 0;
+  position: fixed;
+}
+
+.about-footer {
+  margin-top: 100px;
+}
+
 
 
 /*

@@ -6,44 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content=" Random quote Generator ">
-  <link rel="stylesheet" href="style.css">
   <title> Random Quote Generator - About </title>
 
   <!-- SEMANTIC-UI -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-
+  
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="style.css">
+  
   <!-- FONTS  -->
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
-
   <nav>
     <div class="ui inverted segment center aligned">
       <div class="ui inverted huge menu borderless compact">
         <a href="index.html" class="item teal"> Home </a>
-        <a href="about.html" class=" active item teal"> About </a>
+        <a href="about.html" class="active item teal"> About </a>
         <a href="source.html" class="item teal"> Source </a>
       </div>
     </div>
   </nav>
 
-  <main>
-    <h1> Hello World! </h1>
-    <h1> Welcome to the <span class="italics"> "Random Quote Generator"</span> page!</h1>
-    <h3> This is a small project I made. It is a simple quote generator that also has a dynamically changing background.</h3>
+
+  <main class="ui container">
+    <div class="ui welcome">
+      <h1 class="ui header"> Hello World! Welcome to the <span class="italics"> "Random Quote Generator"</span> page!
+
+        <div class="sub header">
+          This is a small project I made. It is a simple quote generator that also has a dynamically changing background.
+        </div>
+
+      </h1>
+    </div>
+
+    <h2 class="ui header block"> Technologies used:</h2>
     
-    <h3> Technologies used:</h3>
-    <ul>
-      <li> HTML5 </li>
-      <li> CSS3 + Semantic-UI framework </li>
-      <li> Javascript + jQuery </li>
-    </ul>
+    <div class="ui list">
+      
+      <a class="item">
+        <i class="html5 icon massive"></i>
+        <div class="content">
+          <div class="ui huge header"> HTML5 </div>
+        </div>
+      </a>
+      
+      <a class="item">
+        <i class="css3 alternate icon massive"></i>
+        <div class="content">
+          <div class="ui huge header"> CSS3 </div>
+          <div class="description"> + Semantic UI framework </div>
+        </div>
+      </a>
+
+      <a class="item">
+        <i class="js icon massive"></i>
+        <div class="content">
+          <div class="ui huge header"> Javascript </div>
+          <div class="description"> + jQuery </div>
+        </div>
+      </a>
+
+    </div>
+
+
   </main>
-  
-  
-  <div class="footer">
+
+
+  <div class="footer about-footer">
     <footer class="ui segment inverted footer">
       <p> Footer text </p>
     </footer>
