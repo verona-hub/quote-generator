@@ -3,17 +3,18 @@
 // Variable Declarations
 const quoteButton = document.getElementById('quoteButton');
 const paragraph = document.getElementById('paragraph');
-const body = document.getElementById('body');
+const mainImage = document.getElementById('main-image');
 
 // Default background image
-body.style.backgroundImage = `url(img/bg/8.jpg)`;
+mainImage.style.backgroundImage = `url(img/bg/8.jpg)`;
 
+// Quotes collection
 function randomQuote() {
   const allQuotes = [
     " “Whereof one cannot speak, thereof one must be silent.” <span> – Ludwig Wittgenstein – </span>",
     " “He who thinks great thoughts, often makes great errors.” <span> – Martin Heidegger – </span>",
     " “Happiness is not an ideal of reason but of imagination.” <span> – Immanuel Kant – </span>",
-    " “Even while they teach, men learn.” <span> – Seneca the Younger – </span>", 
+    " “Even while they teach, men learn.” <span> – Seneca the Younger – </span>",
     " “We are what we repeatedly do. Excellence, then, is not an act, but a habit.” <span> – Aristotle – </span>",
     " “All that is necessary for the triumph of evil is that good men do nothing.” <span> – John Stuart Mill – </span>",
     " “The only thing I know is that I know nothing.” <span> – Socrates – </span>",
@@ -26,22 +27,21 @@ function randomQuote() {
   ];
 
   // Generates a random quote
-  const random = Math.floor(Math.random() * allQuotes.length);
-  paragraph.innerHTML = allQuotes[random];
+  $('#paragraph').fadeOut(1200, function() {
+    const random = Math.floor(Math.random() * allQuotes.length);
+    paragraph.innerHTML = allQuotes[random];
+    $('#paragraph').fadeIn(2000);
+  });
 
-  // Randomly changes the background
-  setTimeout( function () {
+  // Random number between 1 and the number of images in the folder
   num = Math.floor(Math.random() * 11);
-  body.style.backgroundImage = `url(img/bg/${num}.jpg)`;
-  
-}, 100);
-    
-    /*num = Math.floor(Math.random() * 11);
-    body.style.backgroundImage = `url(img/bg/${num}.jpg)`;*/
-    
 
-  
-  
+  // Generates a random background image
+  $('.main-image').fadeOut(1600, function() {
+    $('.main-image')
+      .css('background-image', 'url(' + `img/bg/${num}.jpg` + ')')
+      .fadeIn(1000);
+  });
 }
 
 // Event listener for click on button
@@ -68,5 +68,3 @@ $('.menu').on('click', '.item.teal', function() {
 $('button').on('mousedown', e => {
   e.preventDefault();
 });
-
-
