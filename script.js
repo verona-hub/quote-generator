@@ -27,22 +27,33 @@ function randomQuote() {
   ];
 
   // Generates a random quote
-  $('#paragraph').fadeOut(1200, function() {
+  $(paragraph).fadeOut(1200, function() {
     const random = Math.floor(Math.random() * allQuotes.length);
     paragraph.innerHTML = allQuotes[random];
-    $('#paragraph').fadeIn(2000);
+    $(paragraph).fadeIn(2000);
+
   });
 
-  // Random number between 1 and the number of images in the folder
-  num = Math.floor(Math.random() * 11);
+  const num = Math.floor(Math.random() * 20);
 
   // Generates a random background image
-  $('.main-image').fadeOut(1600, function() {
-    $('.main-image')
+  $(mainImage).fadeOut(1600, function() {
+    $(mainImage)
       .css('background-image', 'url(' + `img/bg/${num}.jpg` + ')')
       .fadeIn(1000);
   });
+
+  // Button disappears and reappears
+  $(quoteButton).fadeOut(1200, function() {
+    $(quoteButton).fadeIn(600);
+  });
+
+
+
+  /// End of function /// 
 }
+
+
 
 // Event listener for click on button
 quoteButton.addEventListener('click', randomQuote);
