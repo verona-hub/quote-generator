@@ -19,7 +19,7 @@ body.homepage {
 }
 
 main {
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 .main-image {
@@ -84,70 +84,6 @@ h1.hello {
   font-size: 3em;
 }
 
-h1.source {
-  /*height: 10vh;*/
-  /*margin: 10vw;*/
-}
-
-/*
-██  ██████  ██████  ███    ██ ███████
-██ ██      ██    ██ ████   ██ ██
-██ ██      ██    ██ ██ ██  ██ ███████
-██ ██      ██    ██ ██  ██ ██      ██
-██  ██████  ██████  ██   ████ ███████
-*/
-i:hover {
-  animation: heartbeat 500ms;
-  animation-iteration-count: 2;
-  animation-timing-function: ease;
-}
-
-@keyframes heartbeat {
-  0% {
-    transform: scale(1);
-  }
-
-  10% {
-    transform: scale(1.1);
-  }
-
-  20% {
-    transform: scale(1.2);
-  }
-
-  30% {
-    transform: scale(1.3);
-  }
-
-  40% {
-    transform: scale(1.2);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  60% {
-    transform: scale(1.0);
-  }
-
-  70% {
-    transform: scale(0.9);
-  }
-
-  80% {
-    transform: scale(0.8);
-  }
-
-  90% {
-    transform: scale(0.9);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
 /*
 ███    ███  █████  ██ ███    ██
 ████  ████ ██   ██ ██ ████   ██
@@ -193,31 +129,46 @@ img.github {
 ██   ██ ██████   ██████   ██████     ██
 */
 .welcome {
-  margin: 5vh 2vh 7vh;
+  margin: 7vh 2vh 7vh;
 }
 
-h2.ui.header.block {
-  /*margin-bottom: 50px;*/
-}
-
-div.ui.list {
+.h2-tech {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 10vh;
+}
+
+div.list {
+  align-content: center;
+  align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .list>.item {
-  align-items: center;
   display: flex !important;
   flex-direction: column;
-  margin: 100px;
+  justify-content: center;
+  margin: 60px 100px;
 }
 
-.list>a.item:hover {}
-
 .content .header {
-  margin-right: 13px !important;
+  margin-right: 6px !important;
+}
+
+.content-semantic,
+.content-jquery {
+  margin-top: 20px;
+}
+
+.content-jquery {
+  margin-bottom: 6px;
+}
+
+.header-html5 {
+  margin-bottom: 94px !important;
 }
 
 i.icon {
@@ -248,17 +199,46 @@ a>i.js:hover {
   color: #E8C72F !important;
 }
 
-/*
- █████  ██████   ██████  ██    ██ ████████
-██   ██ ██   ██ ██    ██ ██    ██    ██
-███████ ██████  ██    ██ ██    ██    ██
-██   ██ ██   ██ ██    ██ ██    ██    ██
-██   ██ ██████   ██████   ██████     ██
-*/
-main ul {}
+.plus {
+  font-size: 2.6rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
 
-main li {
-  list-style: square;
+.semantic-span {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.semantic-logo {
+  margin-right: 10px;
+  width: 25px;
+}
+
+.jquery-logo-wrapper {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.jquery-logo {
+  margin-left: 10px;
+  width: 100px !important;
+}
+
+/*
+██  ██████  ██████  ███    ██ ███████
+██ ██      ██    ██ ████   ██ ██
+██ ██      ██    ██ ██ ██  ██ ███████
+██ ██      ██    ██ ██  ██ ██      ██
+██  ██████  ██████  ██   ████ ███████
+*/
+i {
+  margin: 1vh 0 !important;
 }
 
 /*
