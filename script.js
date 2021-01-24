@@ -29,6 +29,7 @@ function randomQuote() {
   // Generates a random quote
   $(paragraph).fadeOut(1200, function() {
     const random = Math.floor(Math.random() * allQuotes.length);
+    // Displays the random quote inside the paragraph
     paragraph.innerHTML = allQuotes[random];
     $(paragraph).fadeIn(2000);
 
@@ -69,11 +70,11 @@ const randomOnKeypress = e => {
 document.addEventListener('keydown', randomOnKeypress);
 
 /// NavBar, set active class on click
-$('.menu').on('click', '.item.teal', function() {
+/*$('.menu').on('click', '.item.teal', function() {
   if (!$(this).hasClass('active')) {
     $(this).addClass('active').siblings('.item').removeClass('active');
   }
-});
+});*/
 
 // Remove focus on button, after click
 $('button').on('mousedown', e => {
