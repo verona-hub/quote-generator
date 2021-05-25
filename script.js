@@ -50,7 +50,6 @@ function randomQuote() {
   });
 
 
-
   /// End of function /// 
 }
 
