@@ -8,8 +8,10 @@ const mainImage = document.getElementById('main-image');
 // Default background image
 mainImage.style.backgroundImage = `url(img/bg/8.jpg)`;
 
-// Quotes collection
-function randomQuote() {
+// Random quote function
+randomQuote = () => {
+
+  // Quotes collection
   const allQuotes = [
     " “Whereof one cannot speak, thereof one must be silent.” <span> – Ludwig Wittgenstein – </span>",
     " “He who thinks great thoughts, often makes great errors.” <span> – Martin Heidegger – </span>",
@@ -26,56 +28,54 @@ function randomQuote() {
     " “A blind person who sees is better than a seeing person who is blind.” <span> – Iranian proverb – </span>"
   ];
 
-  // Generates a random quote
-  $(paragraph).fadeOut(1200, function() {
+  // Generate a random quote
+  $(paragraph).fadeOut(1200, () => {
     const random = Math.floor(Math.random() * allQuotes.length);
-    // Displays the random quote inside the paragraph
+    // Display the random quote inside the paragraph
     paragraph.innerHTML = allQuotes[random];
     $(paragraph).fadeIn(2000);
-
   });
+  
+  
+  /// End of function /// 
+};
 
-  const num = Math.floor(Math.random() * 20);
+// Function that generates a random background image
+const randomBackground = () => {
+  $(mainImage).fadeOut(1600, () => {
+    const num = Math.floor(Math.random() * 20);
 
-  // Generates a random background image
-  $(mainImage).fadeOut(1600, function() {
     $(mainImage)
       .css('background-image', 'url(' + `img/bg/${num}.jpg` + ')')
       .fadeIn(1000);
   });
-
-  // Button disappears and reappears
-  $(quoteButton).fadeOut(1200, function() {
-    $(quoteButton).fadeIn(600);
-  });
-
-
-  /// End of function /// 
-}
-
-
-
-// Event listener for click on button
-quoteButton.addEventListener('click', randomQuote);
-
-// Change background and generate a random quote on ENTER or SPACE keypress
-const randomOnKeypress = e => {
-  if (e.keyCode === 13 || e.keyCode === 32) {
-    randomQuote();
-  }
 };
 
-// Event listener on keypress
-document.addEventListener('keydown', randomOnKeypress);
+// Function that animates the button
+const buttonAnimation = () => {
+  $(quoteButton).fadeOut(1400).fadeIn(800);
+};
 
-/// NavBar, set active class on click
-/*$('.menu').on('click', '.item.teal', function() {
-  if (!$(this).hasClass('active')) {
-    $(this).addClass('active').siblings('.item').removeClass('active');
-  }
-});*/
+// Main function that: 
+// a) generates a random quote, 
+// b) changes the background,
+// c) animates the button 
+const launch = () => {
+  randomQuote();
+  randomBackground();
+  buttonAnimation();
+};
 
-// Remove focus on button, after click
-$('button').on('mousedown', e => {
+// Fire the main function on button click
+quoteButton.addEventListener('click', () => {
+  launch();
+  // Remove the focus from the button
   e.preventDefault();
+});
+
+// Fire the main function if ENTER or SPACE are pressed on the keyboard
+document.addEventListener('keydown', e => {
+  if (e.keyCode === 13 || e.keyCode === 32) {
+    launch();
+  }
 });

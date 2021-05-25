@@ -1,3 +1,8 @@
-/Backup
 
 .gitattributes
+
+# Backup folder
+/Backup
+
+# Custom linter css rules
+.csslintrc
