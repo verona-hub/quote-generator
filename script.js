@@ -29,25 +29,24 @@ randomQuote = () => {
   ];
 
   // Generate a random quote
-  $(paragraph).fadeOut(1200, () => {
+  $(paragraph).fadeOut(800, () => {
     const random = Math.floor(Math.random() * allQuotes.length);
     // Display the random quote inside the paragraph
     paragraph.innerHTML = allQuotes[random];
-    $(paragraph).fadeIn(2000);
+    $(paragraph).fadeIn(1600);
   });
-
 
   /// End of function /// 
 };
 
 // Function that generates a random background image
 const randomBackground = () => {
-  $(mainImage).fadeOut(1600, () => {
+  $(mainImage).fadeOut(1200, () => {
     const num = Math.floor(Math.random() * 20);
 
     $(mainImage)
       .css('background-image', 'url(' + `img/bg/${num}.jpg` + ')')
-      .fadeIn(1000);
+      .fadeIn(600);
   });
 };
 
@@ -55,11 +54,11 @@ const randomBackground = () => {
 const buttonAnimation = () => {
   setTimeout(() => {
     quoteButton.style.visibility = 'hidden';
-  }, 800);
-  
+  }, 400);
+
   setTimeout(() => {
     quoteButton.style.visibility = 'visible';
-  }, 1800);
+  }, 1200);
 };
 
 // Main function that: 
@@ -75,7 +74,7 @@ const launch = () => {
 // Fire the main function on button click
 quoteButton.addEventListener('click', () => {
   launch();
-  // Remove the focus from the button
+  // Remove the focus from the button after it was clicked
   e.preventDefault();
 });
 

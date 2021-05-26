@@ -110,7 +110,7 @@ h1.hello {
 }
 
 button {
-  margin: 3vh !important;
+  /* margin: 3vh !important; */
 }
 
 img.github {
