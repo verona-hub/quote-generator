@@ -35,8 +35,8 @@ randomQuote = () => {
     paragraph.innerHTML = allQuotes[random];
     $(paragraph).fadeIn(2000);
   });
-  
-  
+
+
   /// End of function /// 
 };
 
@@ -53,7 +53,13 @@ const randomBackground = () => {
 
 // Function that animates the button
 const buttonAnimation = () => {
-  $(quoteButton).fadeOut(1400).fadeIn(800);
+  setTimeout(() => {
+    quoteButton.style.visibility = 'hidden';
+  }, 800);
+  
+  setTimeout(() => {
+    quoteButton.style.visibility = 'visible';
+  }, 1800);
 };
 
 // Main function that: 
