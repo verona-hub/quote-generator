@@ -4,4 +4,4 @@
 
 It generates a random quote and randomly changes the background image.
 
-![](https://github.com/verona-hub/quote-generator/tree/master/img/screenshot.png)
+![](https://github.com/verona-hub/quote-generator/blob/master/img/screenshot.png)
